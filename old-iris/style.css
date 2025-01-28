@@ -46,6 +46,11 @@ a {
   color: rgb(58, 58, 58);
 }
 
+a.vk-video {
+  text-decoration: underline;
+  color: blue;
+}
+
 p {
   width: 100%;
 }
