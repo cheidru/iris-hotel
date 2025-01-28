@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
   <title>Частный пансион "Ирис"</title>
 </head>
 <body>
@@ -12,7 +13,8 @@
       <div id="logo">
         <img id="logo-img" src="./assets/img/iris.svg" alt="iris logo">
       </div>
-      <div id="menu-container">
+
+      <nav id="menu-container">
         <ul id="menu">
           <li><a href="#apartments">Апартаменты</a></li>
           <li><a href="#cottage">Коттедж</a></li>
@@ -20,7 +22,25 @@
           <li><a href="#location">Как проехать</a></li>
           <li><a href="#about">О нас</a></li>
         </ul>
-      </div>
+
+        <div id="burger-btn-container">
+          <div id="burger-btn">
+            <div class="burger-btn-bar" id="burger-bar1"></div>
+            <div class="burger-btn-bar" id="burger-bar2"></div>
+          </div>
+        </div>
+      </nav>
+
+      <nav id="burger-menu-container">
+        <ul id="burger-menu">
+          <li><a href="#apartments">Апартаменты</a></li>
+          <li><a href="#cottage">Коттедж</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#location">Как проехать</a></li>
+          <li><a href="#about">О нас</a></li>
+        </ul>
+      </nav>
+
     </header>
     <img id="title-image" src="./assets/img/1703715.jpg" alt="koktebel overview">
     <main>
