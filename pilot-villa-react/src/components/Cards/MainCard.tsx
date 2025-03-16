@@ -2,7 +2,10 @@ import Card from "./Card"
 import { CardProps } from "../interface"
 
 export default function MainCard( props: CardProps ) {
-  const sliderContent = props.cards?.map(() => <Card /> )
+  const sliderContent = props.cards?.map(() => (
+    <Card />
+  )
+ )
   return (
     <>
       <h2>{props.title}</h2>
