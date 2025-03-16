@@ -17,9 +17,9 @@ function App() {
       <header>
         <Link to='/'><img src={propellerLogo} className="logo-propeller" alt="propeller logo" /></Link>
         <nav>
-          <Link className="nav-link" to="/apartment">Apartments</Link>
-          <Link className="nav-link" to="/cottage">Cottage</Link>
-          <Link className="nav-link" to="/about">About Us</Link>
+          <Link className="nav-link" to="/apartment">Апартаменты</Link>
+          <Link className="nav-link" to="/cottage">Коттеджи</Link>
+          <Link className="nav-link" to="/about">О нас</Link>
         </nav>
       </header>
 
