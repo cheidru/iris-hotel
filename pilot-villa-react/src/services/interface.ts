@@ -1,7 +1,7 @@
 export type CardProps = {
-  title: string;
-  mainViewSrc: string;
-  mainDescr?: string; 
+  title?: string;
+  src: string;
+  descr?: string; 
   cards?: CardData[];
 }
 

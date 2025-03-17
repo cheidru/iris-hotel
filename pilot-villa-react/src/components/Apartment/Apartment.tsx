@@ -1,5 +1,7 @@
+import MainCard from "../Cards/MainCard"
+
 export default function Apartment() {
   return (
-    <h2>This is Apartment Page</h2>
+    <MainCard />
   )
 }
