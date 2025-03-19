@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import propellerLogo from '/propeller.svg'
+import propellerLogo from './assets/svg/propeller.svg'
 
 import './App.css'
 import Home from './components/Home/Home'
