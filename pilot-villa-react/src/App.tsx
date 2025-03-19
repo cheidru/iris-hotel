@@ -1,7 +1,4 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import propellerLogo from '/propeller.svg'
 
 import './App.css'
@@ -12,7 +9,6 @@ import About from './components/About/About'
 import {useEffect, useState} from "react"
 
 function App() {
-  // const [count, setCount] = useState(0)
   const [winWidth, setWinWidth] = useState(getWinWidth())
 
   function getWinWidth() {
