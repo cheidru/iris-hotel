@@ -9,9 +9,28 @@ import Home from './components/Home/Home'
 import Apartment from './components/Apartment/Apartment'
 import Cottage from './components/Cottage/Cottage'
 import About from './components/About/About'
+import {useEffect, useState} from "react"
 
 function App() {
   // const [count, setCount] = useState(0)
+  const [winWidth, setWinWidth] = useState(getWinWidth())
+
+  function getWinWidth() {
+    return window.innerWidth
+  }
+
+  useEffect(() => {
+    function handleWinResize() {
+      setWinWidth(getWinWidth())
+    }
+
+    window.addEventListener('resize', handleWinResize)
+
+    return () => window.removeEventListener('resize', handleWinResize)
+  }, [])
+
+  const screen = winWidth < 700 ? "mobile" : "wide"
+
   return (
     <BrowserRouter>
       <header>
@@ -25,8 +44,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/apartment" element={<Apartment />}></Route>
-        <Route path="/cottage" element={<Cottage />}></Route>
+        <Route path="/apartment" element={<Apartment screenType={screen} />}></Route>
+        <Route path="/cottage" element={<Cottage screenType={screen} />}></Route>
         <Route path="/about" element={<About />}></Route>
       </Routes>
     </BrowserRouter>

@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-html, body, main, h1, h2, h3 {
+html, body, main, h1, h2, h3, p {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -88,6 +88,75 @@ nav {
   padding-inline: 2rem;
   font-size: 1.2rem;
   color: white;
+}
+
+.main-card-title > h2 {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.main-card-title {
+  padding: 0.5rem 0;
+  text-align: justify;
+}
+
+.main-card-title .card-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
+
+.main-card-title .card-wrapper img {
+  width: 40%;
+  height: auto;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.main-card-title .card-wrapper div {
+  padding: 0 2rem;
+}
+
+.grid-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.grid-wrapper img:hover {
+  opacity: 1;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about p {
+  padding: 0.2rem 0;
+}
+
+.about ul {
+  margin-top: 0;
+}
+
+.about h3 {
+  padding-top: 1rem;
+}
+
+iframe {
+  margin-top: 1rem;
 }
 
 
