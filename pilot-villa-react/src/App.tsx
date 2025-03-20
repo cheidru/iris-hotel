@@ -37,7 +37,6 @@ function App() {
           <Link className="nav-link" to="/about">О нас</Link>
         </nav>
       </header>
-
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/apartment" element={<Apartment screenType={screen} />}></Route>

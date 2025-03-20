@@ -22,7 +22,7 @@ html {
 
 body {
   width: 1440px;
-  height: 100%;
+  height: fit-content;
   font-family: Inter;
 }
 
@@ -31,6 +31,10 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+}
+
+main {
+  padding-bottom: 2rem;
 }
 
 header {
@@ -157,7 +161,10 @@ nav {
 
 iframe {
   margin-top: 1rem;
+  border: none;
 }
+
+
 
 
 
