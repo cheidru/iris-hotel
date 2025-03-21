@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import propellerLogo from './assets/svg/propeller.svg'
 
 import './App.css'
@@ -28,7 +28,7 @@ function App() {
   const screen = winWidth < 700 ? "mobile" : "wide"
 
   return (
-    <BrowserRouter>
+    <>
       <header>
         <Link to='/'><img src={propellerLogo} className="logo-propeller" alt="propeller logo" /></Link>
         <nav>
@@ -43,7 +43,7 @@ function App() {
         <Route path="/cottage" element={<Cottage screenType={screen} />}></Route>
         <Route path="/about" element={<About />}></Route>
       </Routes>
-    </BrowserRouter>
+    </>
   )
 }
 
