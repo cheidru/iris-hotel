@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
+  <BrowserRouter basename={import.meta.env.NODE_ENV === 'production' ? '/iris-hotel' : '/'}>
     <App />
   </BrowserRouter>
 )

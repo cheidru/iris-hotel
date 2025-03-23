@@ -2,7 +2,8 @@
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
-    { "path": "./vite-env.d.ts" },
   ],
-  "types": ["vite/client"]
+  "compilerOptions": {
+      "types": ["vite/client"],
+  }
 }
