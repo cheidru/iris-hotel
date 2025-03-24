@@ -1,12 +1,12 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import propellerLogo from './assets/svg/propeller.svg'
-import burger from './assets/svg/burger-menu.svg'
 
 import './App.css'
 import Home from './components/Home/Home'
 import Apartment from './components/Apartment/Apartment'
 import Cottage from './components/Cottage/Cottage'
 import About from './components/About/About'
+import BurgerMNU from './components/BurgerMenu/BurgetMenu'
 import {useEffect, useState} from "react"
 
 function App() {
@@ -39,10 +39,7 @@ function App() {
           <Link className="nav-link" to="/about">О нас</Link>
         </nav>
 
-          <div className="burger-btn-wrapper">
-            <img src={burger} className="burger-btn" alt="burger logo" />
-          </div>
-
+        <BurgerMNU />
       </header>
 
       <Routes>
