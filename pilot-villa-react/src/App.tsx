@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import propellerLogo from './assets/svg/propeller.svg'
+import burger from './assets/svg/burger-menu.svg'
 
 import './App.css'
 import Home from './components/Home/Home'
@@ -31,12 +32,19 @@ function App() {
     <>
       <header>
         <Link to='/'><img src={propellerLogo} className="logo-propeller" alt="propeller logo" /></Link>
-        <nav>
+        
+        <nav className='main-menu'>
           <Link className="nav-link" to="/apartment">Апартаменты</Link>
           <Link className="nav-link" to="/cottage">Коттеджи</Link>
           <Link className="nav-link" to="/about">О нас</Link>
         </nav>
+
+          <div className="burger-btn-wrapper">
+            <img src={burger} className="burger-btn" alt="burger logo" />
+          </div>
+
       </header>
+
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/apartment" element={<Apartment screenType={screen} />}></Route>

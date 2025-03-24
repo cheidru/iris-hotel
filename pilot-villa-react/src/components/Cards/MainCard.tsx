@@ -6,7 +6,7 @@ export default function MainCard( props: CardProps ) {
 
  
   const sliderContent = props.cards?.map((card, index) => 
-    <Card id={index} src={card.src} descr={card.descr} />
+    <Card key={index} src={card.src} descr={card.descr} />
   )
   
   return (

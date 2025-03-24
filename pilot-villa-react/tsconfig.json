@@ -4,6 +4,6 @@
     { "path": "./tsconfig.app.json" },
   ],
   "compilerOptions": {
-      "types": ["vite/client"],
+      "types": ["vite/client", "vite/types/importMeta.d.ts"],
   }
 }
