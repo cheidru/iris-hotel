@@ -15,3 +15,8 @@ type CardData = {
 export type ScreenType = {
   screenType: string
 }
+
+export type BurgerProps = {
+  burgerMnuOn: boolean;
+  toggleBurgerMnu: () => (void);
+}
