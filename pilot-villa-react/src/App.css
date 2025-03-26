@@ -246,6 +246,14 @@ iframe {
   .hero-image {
     transform: translateX(-55%);
   }
+
+  .main-card-title .card-wrapper {
+    flex-direction: column;
+  }
+
+  .main-card-title .card-wrapper img {
+    width: 100%;
+  }
 }
 
 
