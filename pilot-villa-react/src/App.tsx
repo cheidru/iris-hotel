@@ -30,7 +30,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    setburgerMnuOn(prev => !prev)
+    if (currentPage.pathname !== '/' && screen === "mobile") setburgerMnuOn(prev => !prev)
   }, [currentPage])
 
   const screen = winWidth < 700 ? "mobile" : "wide"
@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <header>
-        <Link to='/'><img src={propellerLogo} className="logo-propeller" alt="propeller logo" /></Link>
+        <Link to='/' onClick={() => burgerMnuOn && setburgerMnuOn(false)}><img src={propellerLogo} className="logo-propeller" alt="propeller logo" /></Link>
         
         <nav className='main-menu'>
           <Link className="nav-link" to="/apartment">Апартаменты</Link>
