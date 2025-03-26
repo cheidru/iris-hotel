@@ -33,6 +33,17 @@ function App() {
     if (currentPage.pathname !== '/' && screen === "mobile") setburgerMnuOn(prev => !prev)
   }, [currentPage])
 
+  useEffect(() => {
+    const lockScroll = document.querySelector('body')
+    if (burgerMnuOn && lockScroll) {
+      lockScroll.style.overflow = 'hidden'
+    }
+    else if (lockScroll) {
+      lockScroll.style.overflow = 'unset'
+    }
+  }, [burgerMnuOn]
+)
+
   const screen = winWidth < 700 ? "mobile" : "wide"
 
   return (

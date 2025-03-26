@@ -90,6 +90,7 @@ header {
   padding: 0;
   text-align: center;
   background-color: #ACAA9D;
+  overflow: hidden;
 }
 
 .title-head {
@@ -196,6 +197,7 @@ iframe {
   transition: all  0.5s;
   visibility: hidden;
   transform: translateX(110vw);
+  z-index: 1;
 }
 
 .burger-menu-wrapper:is(.burger-menu-drive-in) {
@@ -209,6 +211,15 @@ iframe {
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+@media (max-width: 1200px) {
+  .hero-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80rem;
+  }
 }
 
 @media (max-width: 700px) {
@@ -230,6 +241,10 @@ iframe {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  .hero-image {
+    transform: translateX(-55%);
   }
 }
 
