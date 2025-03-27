@@ -1,5 +1,5 @@
 
-export default function BurgerMenu() {
+export default function Modal() {
   return (
     <main>
 
