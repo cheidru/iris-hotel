@@ -179,13 +179,8 @@ header {
   width: 100%;
   height: auto;
 }
-.left-btn {
-  /* left: 1rem; */
-  /* transform: translateY(-50%); */
-}
 
 .right-btn {
-  /* right: 1rem; */
   transform: translateY(-50%) rotate(180deg);
 }
 
@@ -211,8 +206,6 @@ header {
 .slider-card-wrapper > .card-wrapper {
   width: 28rem;
   height: 100%;
-
-
 }
 
 .slider-card-wrapper > .card-wrapper > img {
