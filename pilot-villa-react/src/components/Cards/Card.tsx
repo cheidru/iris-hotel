@@ -2,9 +2,9 @@ import { CardProps } from "../../services/interface"
 
 export default function Card( props: CardProps ) {
   return (
-    <div className="card-wrapper">
+    <div className="card-wrapper" id="card-wrapper">
       <img src={props.src} alt="card image" />
-      {props.title && <div>{props.title}</div>}
+      {props.title && <div id="card-title">{props.title}</div>}
     </div>
   )
 }
