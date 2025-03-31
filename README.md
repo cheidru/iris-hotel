@@ -1,3 +1,3 @@
 # iris-hotel
 
-## [old-iris](https://cheidru.github.io/iris-hotel/old-iris/)
+## [old-iris](https://hoteliris.narod.ru/index/0-5))
