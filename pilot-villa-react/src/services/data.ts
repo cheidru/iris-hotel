@@ -50,10 +50,6 @@ export const cottageJapan : CardProps = {
       descr: "Описание",
     },
     {
-      src: new URL('/src/assets/img/cottage/japan/jap13.jpg', import.meta.url).href,
-      descr: "Описание",
-    },
-    {
       src: new URL('/src/assets/img/cottage/japan/jap14.jpg', import.meta.url).href,
       descr: "Описание",
     },
@@ -65,17 +61,25 @@ export const cottageJapan : CardProps = {
       src: new URL('/src/assets/img/cottage/japan/jap16.jpg', import.meta.url).href,
       descr: "Описание",
     },
-  ]
+  ],
+  video: {
+    //<iframe src="https://vkvideo.ru/video_ext.php?oid=-197335368&id=456239041&hd=2&autoplay=1" width="853" height="480" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+    src: "https://vkvideo.ru/video_ext.php?oid=-197335368&id=456239041&hd=2",
+    width: "853",
+    height: "480",
+    allow: "autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;",
+    descr: "",
+  }
 }
 
 export const cottageBamboo : CardProps = {
-  title: "Коттедж в «Бамбуковой роще»",
+  title: "Коттедж «В бамбуковой роще»",
   src: new URL('/src/assets/img/cottage/bamboo/bamboo1.jpg', import.meta.url).href,
-  descr: `Коттедж в «Бамбуковой роще» (Деревянный коттедж). Два спальных места (возможно 1 доп место).
+  descr: `Коттедж «В бамбуковой роще». Два спальных места (возможно 1 доп место).
 Площадь номера 17 кв.м. Номер состоит из одной комнаты и кухни. Ванная и туалет стоят отдельным блоком рядом с коттеджем . Душевая кабинка,бидэ, умывальник-тюльпан,зеркало, туалет.
 Мебель:	двуспальная кровать, кресло-кровать, стулья, шкаф, прикроватные тумбочки, вешалки, зеркало.
 Удобства:	кондиционер, холодильник, телевизор, посуда, интернет, фен, зона отдыха (веранда, мангал, шезлонги)`,
-  cards: [
+  cards: [  
     {
       src: new URL('/src/assets/img/cottage/bamboo/bamboo2.jpg', import.meta.url).href,
       descr: "Описание",
@@ -96,31 +100,53 @@ export const cottageBamboo : CardProps = {
       src: new URL('/src/assets/img/cottage/bamboo/bamboo6.jpg', import.meta.url).href,
       descr: "Описание",
     },
+  ],
+  video: {
+    src: "https://vkvideo.ru/video_ext.php?oid=-197335368&id=456239042&hd=1",
+    width: "640",
+    height: "360",
+    allow: "autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;",
+    descr: "",
+  }
+}
+
+export const cottageWood : CardProps = {
+  title: "Коттедж «Деревянный»",
+  src: new URL('/src/assets/img/cottage/wood/wood1.jpg', import.meta.url).href,
+  descr: `Коттедж в «Бамбуковой роще» (Деревянный коттедж). Два спальных места (возможно 1 доп место).
+Площадь номера 17 кв.м. Номер состоит из одной комнаты и кухни. Ванная и туалет стоят отдельным блоком рядом с коттеджем . Душевая кабинка,бидэ, умывальник-тюльпан,зеркало, туалет.
+Мебель:	двуспальная кровать, кресло-кровать, стулья, шкаф, прикроватные тумбочки, вешалки, зеркало.
+Удобства:	кондиционер, холодильник, телевизор, посуда, интернет, фен, зона отдыха (веранда, мангал, шезлонги)`,
+  cards: [
     {
-      src: new URL('/src/assets/img/cottage/bamboo/bamboo7.jpg', import.meta.url).href,
+      src: new URL('/src/assets/img/cottage/wood/wood2.jpg', import.meta.url).href,
       descr: "Описание",
     },
     {
-      src: new URL('/src/assets/img/cottage/bamboo/bamboo8.jpg', import.meta.url).href,
+      src: new URL('/src/assets/img/cottage/wood/wood3.jpg', import.meta.url).href,
       descr: "Описание",
     },
     {
-      src: new URL('/src/assets/img/cottage/bamboo/bamboo9.jpg', import.meta.url).href,
+      src: new URL('/src/assets/img/cottage/wood/wood4.jpg', import.meta.url).href,
       descr: "Описание",
     },
     {
-      src: new URL('/src/assets/img/cottage/bamboo/bamboo10.jpg', import.meta.url).href,
+      src: new URL('/src/assets/img/cottage/wood/wood5.jpg', import.meta.url).href,
       descr: "Описание",
     },
     {
-      src: new URL('/src/assets/img/cottage/bamboo/bamboo11.jpg', import.meta.url).href,
+      src: new URL('/src/assets/img/cottage/wood/wood6.jpg', import.meta.url).href,
       descr: "Описание",
-    },
-    {
-      src: new URL('/src/assets/img/cottage/bamboo/bamboo12.jpg', import.meta.url).href,
-      descr: "Описание",
-    },
-  ]
+    },    
+  ],
+  video: {
+    //<iframe src="https://vkvideo.ru/video_ext.php?oid=-197335368&id=456239043&hd=1&autoplay=1" width="640" height="360" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+    src: "https://vkvideo.ru/video_ext.php?oid=-197335368&id=456239043&hd=1",
+    width: "640",
+    height: "360",
+    allow: "autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;",
+    descr: "",
+  }
 }
 
 export const twoRoomAppart : CardProps = {
@@ -167,5 +193,13 @@ export const twoRoomAppart : CardProps = {
       src: new URL('/src/assets/img/apart/apart10.jpg', import.meta.url).href,
       descr: "Описание",
     },
-  ]
+  ],
+  video: {
+      // <iframe src="https://vkvideo.ru/video_ext.php?oid=-197335368&id=456239040&hd=1" width="640" height="360" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+      src: "https://vkvideo.ru/video_ext.php?oid=-197335368&id=456239040&hd=1",
+      width: "640",
+      height: "360",
+      allow: "autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;",
+      descr: "",
+    },
 }

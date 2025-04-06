@@ -28,19 +28,20 @@ export default function MainCard( props: CardProps ) {
     }
  
   const sliderContent = props.cards?.map((card, index) => 
-    <Card key={index} src={card.src} descr={card.descr}/>
+    <Card key={index} src={card.src} descr={card.descr} imagePos={index}/>
   )
 
   const cardQTY = sliderContent?.length
 
   function shootModal() {
     const card = event?.target as HTMLElement
-    console.log('card.id = ', card.id);
+    // If clicked outside an image
     if (card.id === "card-title" || 
         card.id === "card-wrapper" || 
         card.id === props.id) return
-    // Set title value if besides img Card has Title field
+    // Temporary set empty cardTitle
     let cardTitle = ''
+    // Set title value if beside img Card has Title field, means title image is clicked
     if (card.parentElement?.children) {
         cardTitle = card.parentElement?.children.length > 1 && 
         card.parentElement?.parentElement?.id !== 'title-card' ?
@@ -52,8 +53,12 @@ export default function MainCard( props: CardProps ) {
         src: card.getAttribute('src') as string,
         title: cardTitle,
         modalOn: true,
+        slideNo: card.getAttribute('data-imagekey') as string,
+        gallery: props.cards,
       }
     )}
+
+
   }
   
   return (
@@ -82,6 +87,14 @@ export default function MainCard( props: CardProps ) {
           <div className="grid-wrapper" id={props.id} onClick={shootModal}>
             {sliderContent}
           </div>
+      }
+      {props.video && 
+        <div>
+          {props.video?.descr && <div>{props.video?.descr}</div>}
+          <div className="vk-video">
+            <iframe src={props.video.src} width={props.video.width} height={props.video.height} allow={props.video.allow}></iframe>
+          </div>
+        </div>
       }
     </>
   )

@@ -304,6 +304,17 @@ iframe {
   height: auto;
 }
 
+.yandex-map {
+  height: 29rem; 
+  padding: 1rem 0;
+}
+
+.vk-video {  
+  height: 29rem;
+  width: auto;
+
+}
+
 @media (max-width: 1200px) {
   .hero-image {
     position: relative;
