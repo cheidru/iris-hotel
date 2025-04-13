@@ -52,7 +52,7 @@ function App() {
         <nav className='main-menu'>
           <Link className="nav-link" to="/apartment">Апартаменты</Link>
           <Link className="nav-link" to="/cottage">Коттеджи</Link>
-          <Link className="nav-link" to="/about">О нас</Link>
+          <Link className="nav-link" to="/about">Контакты</Link>
         </nav>
 
         <div className="burger-btn-wrapper" onClick={() => setBurgerMnuOn(!burgerMnuOn)}>

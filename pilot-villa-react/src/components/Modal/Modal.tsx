@@ -24,9 +24,12 @@ export default function Modal(props: ModalProps) {
     }
   }
 
+  useEffect(() => swipe(), [touchEnd, touchStart])
+
   useEffect(() => {
-    swipe()
-  }, [touchEnd, touchStart])
+    toggleBodyScroll()
+    return() => toggleBodyScroll()
+  }, [])
 
   function turnModalOff() {
     if (props.setModal) {
@@ -35,8 +38,11 @@ export default function Modal(props: ModalProps) {
         title: undefined,
         modalOn: false,
       }
-    )}
- 
+    )} 
+  }
+
+  function toggleBodyScroll() {
+    document.body.style.overflow = document.body.style.overflow === "hidden" ? "unset" : "hidden"
   }
 
   return (
