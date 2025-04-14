@@ -4,8 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig(
   {
-    // base: '/',
-    base: '/iris-hotel',
+    base: '/',
+    // base: '/iris-hotel',
     plugins: [react()],
   }
 
