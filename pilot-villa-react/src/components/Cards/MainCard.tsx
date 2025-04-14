@@ -72,21 +72,17 @@ export default function MainCard( props: CardProps ) {
       { props.screen == "mobile" ?
           // Slider
           <div className="slider-wrapper">
-            {sliderPage > 0 && 
-              <div className="slider-btn left-btn" onClick={() => moveSlide('left')}>
-                <img src={arrowBTN} alt="slider button left" />
-              </div>
-            }
+            <div style={{opacity: sliderPage > 0 ? "1" : "0"}} className="slider-btn left-btn" onClick={() => moveSlide('left')}>
+              <img src={arrowBTN} alt="slider button left" />
+            </div>
             <div className="slider-window">
               <div className="slider-card-wrapper" id={props.id} onClick={shootModal}>
                 {sliderContent}
               </div>
             </div>
-            {cardQTY && sliderPage < cardQTY - 1 &&
-              <div className="slider-btn right-btn" onClick={() => moveSlide('right')}>
+            <div style={{opacity: cardQTY && sliderPage < cardQTY - 1 ? "1" : "0"}}  className="slider-btn right-btn" onClick={() => moveSlide('right')}>
                 <img src={arrowBTN} alt="slider button right" />
               </div>
-            }
             
           </div> :
           // Grid
