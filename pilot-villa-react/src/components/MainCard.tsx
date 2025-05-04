@@ -1,6 +1,6 @@
 import Card from "./Card"
-import { CardProps } from "../../services/interface"
-import arrowBTN from "../../assets/svg/arrow-left.svg"
+import { CardProps } from "../services/interface"
+import arrowBTN from "../assets/svg/arrow-left.svg"
 import { useEffect, useState } from "react"
 
 

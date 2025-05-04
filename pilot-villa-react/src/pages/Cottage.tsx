@@ -1,8 +1,8 @@
-import MainCard from "../Cards/MainCard"
-import { ModalProps, ScreenType } from "../../services/interface"
-import { cottageSpain, cottageWood, cottageBamboo } from "../../services/data"
+import MainCard from "../components/MainCard"
+import { ModalProps, ScreenType } from "../services/interface"
+import { cottageSpain, cottageWood, cottageBamboo } from "../services/data"
 import { useState } from "react"
-import Modal from "../Modal/Modal"
+import Modal from "../components/Modal"
 
 export default function Cottage( props: ScreenType ) {
     const [modalPic, setModalPic] = useState({

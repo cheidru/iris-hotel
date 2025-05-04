@@ -26,6 +26,10 @@ export const cottageSpain : CardProps = {
       descr: "Описание",
     },
     {
+      src: new URL('/src/assets/img/cottage/spain/spain6.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
       src: new URL('/src/assets/img/cottage/spain/spain7.jpg', import.meta.url).href,
       descr: "Описание",
     },
@@ -50,6 +54,10 @@ export const cottageSpain : CardProps = {
       descr: "Описание",
     },
     {
+      src: new URL('/src/assets/img/cottage/spain/spain13.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
       src: new URL('/src/assets/img/cottage/spain/spain14.jpg', import.meta.url).href,
       descr: "Описание",
     },
@@ -59,6 +67,22 @@ export const cottageSpain : CardProps = {
     },
     {
       src: new URL('/src/assets/img/cottage/spain/spain16.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/cottage/spain/spain17.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/cottage/spain/spain18.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/cottage/spain/spain19.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/cottage/spain/spain20.jpg', import.meta.url).href,
       descr: "Описание",
     },
   ],
@@ -110,6 +134,26 @@ export const cottageBamboo : CardProps = {
       src: new URL('/src/assets/img/cottage/bamboo/bamboo8.jpg', import.meta.url).href,
       descr: "Описание",
     },
+    {
+      src: new URL('/src/assets/img/cottage/bamboo/bamboo9.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/cottage/bamboo/bamboo10.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/cottage/bamboo/bamboo11.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/cottage/bamboo/bamboo12.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/cottage/bamboo/bamboo13.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
   ],
   video: {
     src: "https://vkvideo.ru/video_ext.php?oid=-197335368&id=456239042&hd=1",
@@ -152,7 +196,15 @@ export const cottageWood : CardProps = {
     {
       src: new URL('/src/assets/img/cottage/wood/wood7.jpg', import.meta.url).href,
       descr: "Описание",
-    }, 
+    },
+    {
+      src: new URL('/src/assets/img/cottage/wood/wood8.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/cottage/wood/wood9.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
   ],
   video: {
     //<iframe src="https://vkvideo.ru/video_ext.php?oid=-197335368&id=456239043&hd=1&autoplay=1" width="640" height="360" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
@@ -206,6 +258,22 @@ export const twoRoomAppart : CardProps = {
     },
     {
       src: new URL('/src/assets/img/apart/apart10.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/apart/apart11.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/apart/apart12.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/apart/apart13.jpg', import.meta.url).href,
+      descr: "Описание",
+    },
+    {
+      src: new URL('/src/assets/img/apart/apart14.jpg', import.meta.url).href,
       descr: "Описание",
     },
   ],

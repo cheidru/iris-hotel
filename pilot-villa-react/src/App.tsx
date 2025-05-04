@@ -1,19 +1,16 @@
-import { Routes, Route, Link, useLocation } from 'react-router-dom'
-import propellerLogo from './assets/svg/propeller.svg'
-import burgerBTN from './assets/svg/burger-menu.svg'
-import burgerCloseBTN from './assets/svg/close.svg'
+import { Routes, Route } from 'react-router-dom'
 
 import './App.css'
-import Home from './components/Home/Home'
-import Apartment from './components/Apartment/Apartment'
-import Cottage from './components/Cottage/Cottage'
-import About from './components/About/About'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import Apartment from './pages/Apartment'
+import Cottage from './pages/Cottage'
+import Service from './pages/Service'
+import About from './pages/About'
 import {useEffect, useState } from "react"
 
 function App() {
   const [winWidth, setWinWidth] = useState(getWinWidth())
-  const [burgerMnuOn, setBurgerMnuOn] = useState(false)
-  const currentPage = useLocation()
 
   function getWinWidth() {
     return window.innerWidth
@@ -29,53 +26,16 @@ function App() {
 
   const screen = winWidth < 700 ? "mobile" : "wide"
 
-  useEffect(() => {
-    if (currentPage.pathname !== '/' && screen === "mobile") setBurgerMnuOn(prev => !prev)
-  }, [currentPage, screen])
-
-  useEffect(() => {
-    const lockScroll = document.querySelector('body')
-    if (burgerMnuOn && lockScroll) {
-      lockScroll.style.overflow = 'hidden'
-    }
-    else if (lockScroll) {
-      lockScroll.style.overflow = 'unset'
-    }
-  }, [burgerMnuOn]
-)
-
   return (
-    <>
-      <header>
-        <Link to='/' onClick={() => burgerMnuOn && setBurgerMnuOn(false)}><img src={propellerLogo} className="logo-propeller" alt="propeller logo" /></Link>
-        
-        <nav className='main-menu'>
-          <Link className="nav-link" to="/apartment">Апартаменты</Link>
-          <Link className="nav-link" to="/cottage">Коттеджи</Link>
-          <Link className="nav-link" to="/about">Контакты</Link>
-        </nav>
-
-        <div className="burger-btn-wrapper" onClick={() => setBurgerMnuOn(!burgerMnuOn)}>
-            <img src={burgerMnuOn ? burgerCloseBTN : burgerBTN} className="burger-btn" alt="burger logo" />
-        </div>
-
-        <div className={`burger-menu-wrapper ${burgerMnuOn && 'burger-menu-drive-in'}`}>
-            <nav className='burger-menu'>
-              <Link className="nav-link" to="/apartment">Апартаменты</Link>
-              <Link className="nav-link" to="/cottage">Коттеджи</Link>
-              <Link className="nav-link" to="/about">Контакты</Link>
-            </nav>
-        </div>
-
-      </header>
-
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/apartment" element={<Apartment screenType={screen} />}></Route>
-        <Route path="/cottage" element={<Cottage screenType={screen} />}></Route>
-        <Route path="/about" element={<About />}></Route>
+        <Route path="/" element={<Layout screenType={screen} />}>
+          <Route index element={<Home />} />
+          <Route path="/apartment" element={<Apartment screenType={screen} />} />
+          <Route path="/cottage" element={<Cottage screenType={screen} />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/about" element={<About />} />
+        </Route>
       </Routes>
-    </>
   )
 }
 

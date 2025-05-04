@@ -1,7 +1,7 @@
-import MainCard from "../Cards/MainCard"
-import { twoRoomAppart } from "../../services/data"
-import { ModalProps, ScreenType } from "../../services/interface"
-import Modal from "../Modal/Modal"
+import MainCard from "../components/MainCard"
+import { twoRoomAppart } from "../services/data"
+import { ModalProps, ScreenType } from "../services/interface"
+import Modal from "../components/Modal"
 import { useState } from "react"
 
 export default function Apartment( props: ScreenType ) {

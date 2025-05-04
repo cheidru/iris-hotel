@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { ModalProps } from "../../services/interface"
+import { ModalProps } from "../services/interface"
 
 export default function Modal(props: ModalProps) {
   const[touchStart, setTouchStart] = useState(0)

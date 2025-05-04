@@ -27,8 +27,30 @@ body {
   font-family: Inter;
 }
 
+section {
+  padding-top: 1rem;
+}
+
 h2 {
   text-align: left;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  padding: 0.5rem 0;
+}
+
+h3 > ul {
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding-top: 0;
+}
+
+li {
+  padding: 0;
 }
 
 #root {
@@ -88,26 +110,40 @@ header {
 }
 
 .title {
+  position: relative;
   height: fit-content;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   padding: 0;
   text-align: center;
-  background-color: #ACAA9D;
+  /* background-color: #ACAA9D; */
   overflow: hidden;
+}
+
+.title-block {
+  position: absolute;
+  color: rgb(78, 80, 113);
+  padding: 0 1rem;
+  z-index: 1;
 }
 
 .title-head {
   padding-top: 1rem;
-  color: bisque;
+  color: rgb(19, 61, 124);
 }
 
 .title-text {
   padding-inline: 2rem;
   font-size: 1.2rem;
-  color: white;
+}
+
+.title-text-small {
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5rem;
 }
 
 .main-card-container {
@@ -285,7 +321,7 @@ iframe {
   transition: all  0.5s;
   visibility: hidden;
   transform: translateX(110vw);
-  z-index: 1;
+  z-index: 2;
 }
 
 .burger-menu-wrapper:is(.burger-menu-drive-in) {
@@ -311,7 +347,7 @@ iframe {
   align-items: center;
   justify-content: center;
   background-color:rgb(64, 63, 61);
-  z-index: 2;
+  z-index: 3;
 }
 
 .modal-wrapper img {
@@ -331,18 +367,27 @@ iframe {
 }
 
 @media (max-width: 1200px) {
-  .hero-image {
+  /* .hero-image {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 100%;
+    transform: translateX(50%);
     width: 80rem;
-  }
+  } */
   
   iframe {  
     max-width: 100%;
     height: 100%;
     padding: 1rem;
   }
+}
+
+@media (max-width: 1000px) {
+  .hero-image {
+    position: relative;
+    transform: translateX(-10%);
+    width: 80rem;
+  }
+
 }
 
 @media (max-width: 700px) {
@@ -366,10 +411,6 @@ iframe {
     gap: 1rem;
   }
 
-  .hero-image {
-    transform: translateX(-55%);
-  }
-
   .main-card-title .card-wrapper {
     flex-direction: column;
   }
@@ -386,8 +427,22 @@ iframe {
   .slider-card-wrapper > .card-wrapper > img {
     border-radius: unset;
   }
+}
 
+@media (max-width: 550px) {
+  .hero-image {
+    position: relative;
+    transform: translateX(-10%);
+    width: 100rem;
+  }
+}
 
+@media (max-width: 400px) {
+  .hero-image {
+    position: relative;
+    transform: translateX(-10%);
+    width: 140rem;
+  }
 }
 
 

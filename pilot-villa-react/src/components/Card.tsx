@@ -1,4 +1,4 @@
-import { CardProps } from "../../services/interface"
+import { CardProps } from "../services/interface"
 
 export default function Card( props: CardProps ) {
   return (
