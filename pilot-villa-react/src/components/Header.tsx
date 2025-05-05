@@ -43,7 +43,7 @@ export default function Header( props: ScreenType ) {
     </div>
 
     <div className={`burger-menu-wrapper ${burgerMnuOn && 'burger-menu-drive-in'}`}>
-        <nav className='burger-menu'>
+        <nav className='burger-menu' onClick={() => setBurgerMnuOn(false)}>
           <Link className="nav-link" to="/apartment">Апартаменты</Link>
           <Link className="nav-link" to="/cottage">Коттеджи</Link>
           <Link className="nav-link" to="/service">Услуги</Link>
