@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import propellerLogo from '../assets/svg/propeller.svg'
 import burgerBTN from '../assets/svg/burger-menu.svg'
 import burgerCloseBTN from '../assets/svg/close.svg'
@@ -29,13 +29,18 @@ export default function Header( props: ScreenType ) {
 
   return (
     <header>
-    <Link to='/' onClick={() => burgerMnuOn && setBurgerMnuOn(false)}><img src={propellerLogo} className="logo-propeller" alt="propeller logo" /></Link>
+    <NavLink to='/' 
+      onClick={() => burgerMnuOn && setBurgerMnuOn(false)}
+      className={({isActive}) => isActive ? "logo-active" : ""}
+      >
+        <img src={propellerLogo} className="logo-propeller" alt="propeller logo" />
+    </NavLink>
     
     <nav className='main-menu'>
-      <Link className="nav-link" to="/apartment">Апартаменты</Link>
-      <Link className="nav-link" to="/cottage">Коттеджи</Link>
-      <Link className="nav-link" to="/service">Услуги</Link>
-      <Link className="nav-link" to="/about">Контакты</Link>
+      <NavLink className={({isActive}) => isActive ? "nav-link link-active" : "nav-link"} to="/apartment">Апартаменты</NavLink>
+      <NavLink className={({isActive}) => isActive ? "nav-link link-active" : "nav-link"} to="/cottage">Коттеджи</NavLink>
+      <NavLink className={({isActive}) => isActive ? "nav-link link-active" : "nav-link"} to="/service">Услуги</NavLink>
+      <NavLink className={({isActive}) => isActive ? "nav-link link-active" : "nav-link"} to="/about">Контакты</NavLink>
     </nav>
 
     <div className="burger-btn-wrapper" onClick={() => setBurgerMnuOn(!burgerMnuOn)}>
@@ -44,10 +49,10 @@ export default function Header( props: ScreenType ) {
 
     <div className={`burger-menu-wrapper ${burgerMnuOn && 'burger-menu-drive-in'}`}>
         <nav className='burger-menu' onClick={() => setBurgerMnuOn(false)}>
-          <Link className="nav-link" to="/apartment">Апартаменты</Link>
-          <Link className="nav-link" to="/cottage">Коттеджи</Link>
-          <Link className="nav-link" to="/service">Услуги</Link>
-          <Link className="nav-link" to="/about">Контакты</Link>
+          <NavLink className={({isActive}) => isActive ? "nav-link link-active" : "nav-link"} to="/apartment">Апартаменты</NavLink>
+          <NavLink className={({isActive}) => isActive ? "nav-link link-active" : "nav-link"} to="/cottage">Коттеджи</NavLink>
+          <NavLink className={({isActive}) => isActive ? "nav-link link-active" : "nav-link"} to="/service">Услуги</NavLink>
+          <NavLink className={({isActive}) => isActive ? "nav-link link-active" : "nav-link"} to="/about">Контакты</NavLink>
         </nav>
     </div>
 

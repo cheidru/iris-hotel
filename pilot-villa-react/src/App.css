@@ -92,10 +92,19 @@ header {
   width: 3rem;
 }
 
+.logo-active {
+  cursor: none;
+}
+
 .nav-link {
   text-decoration: none;
   font-size: 1.3rem;
   color: orange;
+}
+
+.link-active {
+  opacity: 0.5;
+  cursor: none;
 }
 
 .hero-image {
