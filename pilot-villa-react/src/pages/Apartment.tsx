@@ -1,4 +1,4 @@
-import MainCard from "../components/MainCard"
+import Card from "../components/Card"
 import { twoRoomAppart } from "../services/data"
 import { ModalProps, ScreenType } from "../services/interface"
 import Modal from "../components/Modal"
@@ -17,7 +17,7 @@ export default function Apartment( props: ScreenType ) {
                                 src={modalPic.src} 
                                 title={modalPic.title}
                                 setModal={setModalPic} />}
-        <MainCard 
+        <Card 
           {...twoRoomAppart}
           id="apartments"
           screen={props.screenType}

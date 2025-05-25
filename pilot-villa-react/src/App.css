@@ -33,11 +33,14 @@ section {
 
 h2 {
   text-align: left;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
 }
 
 h3 {
-  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: justify;
+  padding: 1rem 0;
 }
 
 h3 > ul {
@@ -62,6 +65,9 @@ li {
 
 main {
   height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 1rem;
   padding-bottom: 2rem;
 }
@@ -128,7 +134,6 @@ header {
   gap: 1rem;
   padding: 0;
   text-align: center;
-  /* background-color: #ACAA9D; */
   overflow: hidden;
 }
 
@@ -169,22 +174,48 @@ header {
   text-align: justify;
 }
 
-.main-card-title .card-wrapper {
+.card-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  padding: 0.5rem 0;
+  gap: 1rem;
+  background-color: antiquewhite;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
-.main-card-title .card-wrapper img {
-  width: 40%;
-  height: auto;
-  border-radius: 1rem;
+.card-wrapper > img {
+  width: 25%;
+  flex-basis: 350px;
+  flex-shrink: 0;
   cursor: pointer;
 }
 
-.main-card-title .card-wrapper div {
-  padding: 0 2rem;
+.descr-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.descr-text {
+  padding: 0 1rem;
+  text-align: justify;
+}
+
+.descr-wrapper > button {
+  align-self: left;
+  width: fit-content;
+  padding: 0.5rem 2rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border-width: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.descr-wrapper > button:hover {
+  background-color: #dedede;
 }
 
 .grid-wrapper {
@@ -273,25 +304,14 @@ header {
   height: 100%;
 }
 
-.slider-card-wrapper > .card-wrapper > img {
-  width: 29rem;
-  height: auto;
-  border-radius: 1rem;
-  opacity: 90%;
-  cursor: pointer;
-}
-
-.slider-card-wrapper > .card-wrapper > img:hover {
-  opacity: 100%;
-}
-
 .about {  
   display: flex;
   flex-direction: column;
 }
 
-.about p {
+.about > p, .service > p {
   padding: 0.2rem 0;
+  text-align: justify;
 }
 
 .about ul {
@@ -420,22 +440,29 @@ iframe {
     gap: 1rem;
   }
 
-  .main-card-title .card-wrapper {
+  .card-wrapper {
     flex-direction: column;
+    gap: 0;
   }
 
-  .main-card-title .card-wrapper img {
+  .card-wrapper > h2 {
+    padding: 0.5rem;
+    text-align: center;
+  }
+  .card-wrapper img {
     width: 100%;
+    height: auto;
   }
 
-  .main-card-title .card-wrapper div {
-    padding: 0;
-    padding-bottom: 1rem;
+  .descr-wrapper {
+    padding: 1rem 0;
   }
 
-  .slider-card-wrapper > .card-wrapper > img {
-    border-radius: unset;
+  .descr-wrapper > button {
+    align-self: center;
+    margin-left: unset;
   }
+
 }
 
 @media (max-width: 550px) {

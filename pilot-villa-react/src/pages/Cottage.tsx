@@ -1,4 +1,4 @@
-import MainCard from "../components/MainCard"
+import Card from "../components/Card"
 import { ModalProps, ScreenType } from "../services/interface"
 import { cottageSpain, cottageWood, cottageBamboo } from "../services/data"
 import { useState } from "react"
@@ -28,19 +28,19 @@ export default function Cottage( props: ScreenType ) {
           У каждого коттеджа есть своя территория с зоной отдыха, 
           своя веранда-кухня-гостиная, комфортабельные номера.</h3>
 
-        <MainCard 
+        <Card 
           {...cottageSpain}
-          id="spain"
+          id="spn"
           screen={props.screenType}
           setModal={setModalPic} />
-        <MainCard 
+        <Card 
           {...cottageBamboo}
-          id="bamboo"
+          id="bam"
           screen={props.screenType}
           setModal={setModalPic} />
-        <MainCard 
+        <Card 
           {...cottageWood}
-          id="wood"
+          id="wod"
           screen={props.screenType}
           setModal={setModalPic} />
     </main>
