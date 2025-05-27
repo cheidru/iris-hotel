@@ -185,6 +185,7 @@ header {
 
 .card-wrapper > img {
   width: 25%;
+  object-fit: cover;
   flex-basis: 350px;
   flex-shrink: 0;
   cursor: pointer;
