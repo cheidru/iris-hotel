@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { CardProps } from "../services/interface"
 
 export default function Card( props: CardProps ) {
@@ -8,7 +9,7 @@ export default function Card( props: CardProps ) {
       <div className="descr-wrapper">
         {props.screen !== "mobile" ? <h2>{props.title}</h2> : undefined}
         <div className="descr-text">{props.descr}</div>
-        <button>Больше информации</button>
+        <button><Link className="link-to-details" to={`/${props.id}`}>Больше информации</Link></button>
       </div>
     </div>
   )

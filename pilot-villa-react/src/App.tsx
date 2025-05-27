@@ -7,6 +7,7 @@ import Apartment from './pages/Apartment'
 import Cottage from './pages/Cottage'
 import Service from './pages/Service'
 import About from './pages/About'
+import Details from './pages/Details'
 import {useEffect, useState } from "react"
 
 function App() {
@@ -30,10 +31,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout screenType={screen} />}>
           <Route index element={<Home />} />
-          <Route path="/apartment" element={<Apartment screenType={screen} />} />
-          <Route path="/cottage" element={<Cottage screenType={screen} />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/about" element={<About />} />
+          <Route path="apartment" element={<Apartment screenType={screen} />} />
+          <Route path="cottage" element={<Cottage screenType={screen} />} />
+          <Route path="service" element={<Service />} />
+          <Route path="about" element={<About />} />
+          <Route path="/:id" element={<Details />} />
         </Route>
       </Routes>
   )

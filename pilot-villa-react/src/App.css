@@ -191,6 +191,11 @@ header {
   cursor: pointer;
 }
 
+.link-to-details {
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+
 .descr-wrapper {
   display: flex;
   flex-direction: column;
