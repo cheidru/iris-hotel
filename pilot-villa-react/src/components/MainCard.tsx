@@ -1,14 +1,15 @@
-import Card from "./Card"
+// import Card from "./Card"
 import { CardProps } from "../services/interface"
 import arrowBTN from "../assets/svg/arrow-left.svg"
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react"  
 
 
 export default function MainCard( props: CardProps ) {
   const [sliderPage, setSliderPage] = useState(0)
    
   const sliderContent = props.cards?.map((card, index) => 
-    <Card key={index} src={card.src} descr={card.descr} imagePos={index}/>
+    // <Card key={index} src={card.src} descr={card.descr} imagePos={index}/>
+    <img className="gallery-image" key={index} src={card.src} alt={card.descr} />
   )
 
   const cardQTY = sliderContent?.length
@@ -63,9 +64,10 @@ export default function MainCard( props: CardProps ) {
       <div className="main-card-title">
         <h2>{props.title}</h2>
         <div onClick={shootModal} id="title-card">
-          <Card src={props.src}
+          {/* <Card src={props.src}
                 title={props.descr}
-                setModal={props.setModal} />
+                setModal={props.setModal} /> */}
+          <img src={props.src} alt="title-image" />
         </div>
       </div>
 
